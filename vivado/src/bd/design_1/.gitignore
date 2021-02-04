@@ -1,0 +1,8 @@
+*.bmm
+*.bxml
+*.xdc
+hw_handoff
+ipshared
+sim
+synth
+ui
