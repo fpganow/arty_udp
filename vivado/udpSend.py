@@ -13,11 +13,14 @@ sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 
 server_address = (ip, port)
 
+random_num = random.randint(0, 100)
+msg = f'This is message {random_num}.  It will be repeated.  To Arty.'
+b_msg = bytes(msg, 'utf-8')
+sock.senddo(b_msg, (ip, port))
+
+
 #try:
 #    sock.connect(server_address)
-message = b'This is the message. It will be repeated.  To Genesys or Arty.'
-sock.sendto(message, (ip, port))
-
 #    amount_received = 0
 #    amount_expected = len(message)
 #    while amount_received < amount_expected:
